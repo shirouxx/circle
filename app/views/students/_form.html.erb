@@ -1,0 +1,31 @@
+<%= form_for @student do |f| %>
+<!-- %= form_for :student,url:students_path do |f|  -->
+
+	<div>
+		<%= f.label :bukatu %>
+		<%= f.collection_select :bukatu_id,Bukatu.all,:id,:name,prompt:'選択して下さい'%> 
+		<!-- f.collection_select 属性名, 表示モデル, 渡す値, モデルから表示させる属性, prompt: デフォルト表示文字 -->
+		<!-- <渡す値を入れたいカラム名、modelのindex,カラムの自動で振られたid番号,テーブルから表示させたいカラム名> -->
+	</div>
+
+  <div>
+	<%= f.label :name %>
+	<%= f.text_field :name %> 
+  </div>
+
+  <div>
+	<%= f.label :grade %>
+	<%= f.text_field :grade %> 
+  </div>
+
+  <div>
+	<%= f.label :content %>
+	<%= f.text_area :content %> 
+  </div>
+
+
+	<div>
+		<%= f.submit %>
+	</div>
+
+<% end %>

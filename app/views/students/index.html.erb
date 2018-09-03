@@ -1,0 +1,16 @@
+<h2>生徒一覧</h2>
+<% @students.each do |student| %>
+・<%= link_to student.name,student_path(id: student.id) %>
+<%= student.bukatu.name %>
+<br>
+<% end %>
+<br>
+<%= link_to '[Top]',root_path %>
+<% console %>
+
+
+<!-- <% @students.map do |student| if student.bukatu.name != "帰宅" %> -->
+<!-- ・<% link_to student.name,student_path(id: student.id) %> -->
+<!-- <%= student.bukatu.name %> -->
+<!-- <% end %> -->
+<!-- <% end %> -->

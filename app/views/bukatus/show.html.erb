@@ -1,0 +1,5 @@
+<h3><%= @bukatu.name %>部</h3><h4>部員<%= @members.size%>名</h4>
+<!-- <%= @member %><br> -->
+<% @members.each do |member| %>
+・<%= link_to member.name,student_path(id: member.id) %> <br>
+<% end %>
