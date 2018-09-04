@@ -3,5 +3,5 @@
 学年：<%= @student.grade %>年生<br>
 自己紹介：<%= @student.content %><br>
 <%= link_to '[Top]',students_path %>
-<%= link_to '[Edit]',edit_student_path(@student.id) %>
+<%= link_to '[Edit]',edit_student_path(@student) %>
 <%= link_to '[x]',student_path(@student),method: :delete,data: {confirm: 'Sure?'}%>
