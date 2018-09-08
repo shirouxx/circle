@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   end
 
   def index
+    @artist = params[:search]
   end
 
   def show
