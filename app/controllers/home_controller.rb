@@ -3,7 +3,9 @@ class HomeController < ApplicationController
   end
 
   def index
-    @artist = params[:search]
+    respond_to do |format|
+    format.html { render :action => "index"}
+  end
   end
 
   def show
