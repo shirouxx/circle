@@ -3,9 +3,6 @@ class HomeController < ApplicationController
   end
 
   def index
-    respond_to do |format|
-    format.html { render :action => "index"}
-  end
   end
 
   def show
