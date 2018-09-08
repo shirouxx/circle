@@ -1,0 +1,17 @@
+<p>曲名とリリース日付が表示されます</p>
+<button id = "show" >Show</button>
+<button id = "show"><%= link_to 'Return',home_index_path %></button>
+<div id = "button" style = "display:none;" ></div>
+<!-- 他の要素も追加してみましょう -->
+ <!-- index viewを作成して_formを作成。 -->
+ <!-- _formにユーザーが好きなアーティスト名を入力したら、以下の情報を表示出来るように仕様変更。 -->
+<% console %>
+<script>
+$('#show').click(function() {
+	<% @results.each do |result| %>
+	$("#button").append("<ul><li><%= result["trackName"] %> <%= result["releaseDate"].to_s.slice(0..9) %>")
+	<% end %>
+	 $("#button").toggle();
+}
+);
+</script>
