@@ -1,5 +1,6 @@
 <p>検索したいアーティスト名を入力して下さい</p>
-<%= form_tag(home_show_path, method: "get") do %>
+<!-- form_tag("/home/show") was causing the missing template,maybe -->
+<%= form_tag(home_show_path, method: "post") do %>
   <%= label_tag(:q, "アーティスト名：") %>
   <%= text_field_tag(:search,params[:search]) %>
   <%= submit_tag("検索")%>
