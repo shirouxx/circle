@@ -16,7 +16,8 @@ class HomeController < ApplicationController
     json = Net::HTTP.get(info)
     result = JSON.parse(json)
     @results = result["results"]
-    @results.sort_by! { |hash| hash['releaseDate'].to_i }
+    @results.sort! {|a, b| a['releaseDate'] <=> b['releaseDate'] }
+    # @results.sort_by! { |hash| hash['releaseDate'].to_i }
     # binding.pry
   end
 
